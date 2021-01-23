@@ -3,8 +3,15 @@ const date = new Date();
 let year = date.getFullYear();
 let month = date.getMonth() + 1;
 const config = {
-  show: 3,
+  show: 1,
 };
+
+function changeDisplayCounts() {
+  let count = Number(document.getElementById("displayCounts").value);
+  config.show = count;
+  document.getElementById("calendar").innerHTML = "";
+  showCalendar(year, month);
+}
 
 function showCalendar(year, month) {
   for (i = 0; i < config.show; i++) {

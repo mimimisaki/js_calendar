@@ -4,8 +4,23 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css" />
     <body>
-      <button id="prev" type="button">前の月</button>
-      <button id="next" type="button">次の月</button>
+      <div>
+        <button id="prev" type="button">前の月</button>
+        <button id="next" type="button">次の月</button>
+      </div>
+      <div>
+        <span>表示数</span>
+        <select
+          name="displayCounts"
+          id="displayCounts"
+          onchange="changeDisplayCounts()"
+        >
+          <option value="1" selected>1ヶ月</option>
+          <option value="2">2ヶ月</option>
+          <option value="3">3ヶ月</option>
+        </select>
+      </div>
+
       <div id="calendar"></div>
       <script type="text/javascript" src="index.js"></script>
     </body>
